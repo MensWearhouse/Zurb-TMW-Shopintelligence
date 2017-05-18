@@ -1,0 +1,2 @@
+# Shopintelligence
+AI from Shopintelligence
