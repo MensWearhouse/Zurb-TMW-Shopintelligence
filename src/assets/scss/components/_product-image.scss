@@ -1,0 +1,26 @@
+.product-image-small {
+  padding-bottom: 1rem;
+  ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  }
+  li {
+      float: left;
+  }
+}
+
+.slick-dots {
+  bottom: -30px !important;
+  transform: translateX(-50%) !important;
+  left: 50% !important;
+  width: auto !important;
+}
+
+.slick-slide {
+  padding: 6px;
+  outline: none;
+}

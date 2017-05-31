@@ -1,0 +1,666 @@
+$mega-menu-link-padding: 4;
+$promo-menu-width: 400;
+
+@mixin tmw-menu($tmw-font-size:10, $tmw-font-weight:500, $tmw-letter-spacing:1px, $tmw-border-bottom-size:3px) {
+  @include button($button-tny, $white, false, true);
+  display: block;
+  margin-bottom: 0;
+  font-size: rem-calc($tmw-font-size);
+  letter-spacing: $tmw-letter-spacing;
+  text-transform: uppercase;
+  font-weight: $tmw-font-weight;
+  border: none;
+  border-bottom: $tmw-border-bottom-size solid white;
+  transition: border 300ms ease-out;
+
+  &.active, &:hover {
+    border-bottom: $tmw-border-bottom-size solid $primary-color;
+  }
+
+  &:hover, &:focus { background: $white; }
+  &::after {
+    content:attr(title);
+    color:transparent;
+    visibility:hidden;
+
+    display:block;
+    padding: 0 !important;
+    max-height:1px;
+    margin-bottom:-1px;
+    overflow:hidden;
+    // NOTE: do not edit above
+
+    // HACK: merge styles from :hover state + parent state
+    // this is used to create a invisible container of the exact
+    // width of the bolded hover state to prevent container shift
+    // on hover
+
+    @include button($button-tny, $white, false, true);
+    display: block;
+    margin-bottom: 0;
+    font-size: rem-calc($tmw-font-size);
+    letter-spacing: $tmw-letter-spacing;
+    text-transform: uppercase;
+    border: none;
+    transition: border 300ms ease-out;
+    font-weight: bold;
+    border-bottom: $tmw-border-bottom-size solid white;
+
+  }
+}
+
+.logo {
+  height: 20px;
+  @media #{$small-only} {
+
+    max-width: 75%;
+    margin-right: 10px;
+  }
+}
+
+.tab-bar-section {
+  width: 90%;
+}
+
+nav.small-only {
+  ul.global-tabs {
+
+    @include button-group-container();
+    margin-bottom: 1rem;
+
+    li {
+      @include button-group-style(false, 3);
+      
+      a {
+        @include button($button-tny, $primary-color, false, true);
+        margin-bottom: 0;
+        border: none;
+        
+        &:hover {
+          background: $primary-color;
+        }
+        
+        &.active {
+          @include button($button-tny, $white, false, true, false);
+          margin-bottom: 0;
+          border: none;
+          &:hover { background: $secondary-color; }
+        }
+      }
+    }
+  }
+
+  .secondary-nav img {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(10);
+    width: 90%;
+    
+    .mobile-promo-image {
+      width: 40%;
+      padding: 0;
+    }
+  }
+}
+
+nav.global {
+  border-bottom: 1px solid #eee;
+  @extend .hide-for-small-only;
+  
+  section.global-tabs {
+    @include grid-column(6);
+    padding-left: 0 !important;
+    background: $primary-color;
+
+    ul {
+      @include button-group-container();
+      li {
+
+        @include button-group-style(false, 1);
+        a {
+          height: 32px;
+          letter-spacing: 0.2em;
+          text-align: left !important;
+          @include button($button-tny, $primary-color, false, true);
+          margin-bottom: 0;
+          border: none;
+        }
+      }
+    }
+  }
+  
+  section.links {
+    @include grid-column(6);
+    background: $primary-color;
+    ul a {
+      height: 32px;
+      @include button($button-tny, $primary-color, false, true);
+      margin-bottom: 0;
+      border: none;
+      &:hover { background: $primary-color; }
+    }
+  }
+}
+
+.main {
+  @extend .hide-for-small-only;
+  @include grid-row();
+  margin-bottom: 0;
+  .ship-dropdown-toggle {
+    @include button(0, $white);
+    @include dropdown-button(tiny, lighten($primary-color, 50%), true);
+    margin: rem-calc(3 0 0 0);
+    font-size: $paragraph-font-size;
+    border: none !important;
+    
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+.logo-subtext {
+  border-left: 1px solid #bfbfbf;
+  padding-left: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.logo-bar {
+  @include grid-column(12);
+  padding-top: 2rem;
+  min-height: 60px;
+  padding-left: 0.45em;
+  padding-right: 0.45em;
+  text-align: center;
+}
+
+nav.global section.links {
+  position: relative;
+  
+
+  ul {
+    @include inline-list();
+    float: right;
+    margin-bottom: 0;
+
+    li {
+      margin-left: 0;
+    }
+  }
+
+  ul a {
+    color: #fff;
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: inline-block;
+    vertical-align: center;
+  }
+  a.active {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.cart-lockup {
+  position: relative;
+  padding: 0;
+  width: 30px;
+}
+
+.cart-number {
+  background: url(../images/icons/cart-white.svg) no-repeat center center;
+  background-size: 25px;
+  height: 31px;
+  color: white;
+  line-height: 35px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart-link a {
+  padding-left: 0 !important;
+}
+
+ul.off-canvas-list {
+  li {
+    a {
+      color: $primary-color;
+      padding: 0.6rem 1rem;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+    
+    label {
+      font-weight: 500;
+      padding: 1rem;
+    }
+  }
+
+  &.secondary-nav {
+    li {
+      a {
+        text-transform: none;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .back-trigger {
+    margin-left: rem-calc(10);
+    font-size: rem-calc(12);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0;
+    opacity: .999999;
+    margin-bottom: 10px;
+  }
+
+  // Style Secondary Level Parent Links
+  li.has-secondary {
+    a {
+      text-transform: uppercase;
+      font-weight: 500;
+      &:after {
+        content: ">";
+        float:right;
+        margin-right: rem-calc(10);
+        position: relative;
+        top: rem-calc(-4);
+      }
+    }
+  }
+}
+
+.promo-bar {
+  @include inline-list();
+  margin-bottom: 0;
+  
+  .emphasize {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: rem-calc(18);
+    line-height: 1;
+  }
+  
+  .icon {
+    margin-top:-5px;
+    width: 16px;
+  }
+}
+
+.mega-menu {
+  padding-left: 1.4rem;
+  position: relative;
+  & h6 {
+    padding: 6px 10px;
+    margin: 0;
+    font-size: $paragraph-font-size;
+    font-weight: bold;
+  }
+  & ul {
+    margin: 0;
+    margin-bottom: 1rem;
+    list-style-type: none;
+    a {
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+  }
+  &.collections {
+    padding-left: 0;
+  }
+  .menu-promo {
+    width: 200px;
+    height: 300px;
+    padding-top: 0;
+    // margin: 0 $column-gutter/2 $column-gutter/2;
+    background-image: url("../images/promo.png");
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .menu-links {
+    padding-top: 1.4rem;
+  }
+  .menu-promo-text {
+    text-transform: uppercase;
+    color: $secondary-color;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 1rem;
+  }
+}
+
+#menu-promos {
+  padding-top: 1rem;
+
+  li {
+    margin-bottom: 1rem;
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  a {
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .columns.mega-expand {
+    width: 100% !important;
+  }
+  #mega-menu-clothing-row, #mega-menu-shoes-row, #mega-menu-accessories-row {
+    padding-left:0 !important;
+  }
+}
+
+.mobile-tab-bar {
+  background: #000;
+}
+
+.left-small{
+  border-right: none;
+}
+
+.left-off-canvas-menu {
+  border: 1px solid #efefef;
+}
+
+
+.retail-off-canvas-nav {
+
+  .nav-department {
+    font-size: rem-calc(12px);
+    text-transform: uppercase;
+    font-weight: 500;
+    list-style-type: none;
+    padding-top: 15px;
+    margin-left: 0 !important;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .accordion .accordion-navigation > a {
+    padding: rem-calc(10px) !important;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #efefef;
+    font-size: rem-calc(12px);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-color: $callout-color;
+  }
+
+  .accordion .accordion-navigation > .content {
+    list-style-type: none;
+  }
+
+  .accordion .accordion-navigation > .content.active {
+    padding-top: 0 !important;
+    border-bottom: 1px solid #efefef;
+    margin: 0;
+
+    ul {
+      margin: -5px;
+    }
+
+    li {
+      list-style-type: none;
+      padding-bottom: 5px;
+      margin-left: 10px;
+
+      a {
+        font-size: rem-calc(13);
+      }
+    }
+  }
+
+  .nav-account-settings {
+    margin-top: rem-calc(50px);
+
+    .accordion-navigation:first-child {
+      border-top: 1px solid #efefef;
+    }
+  }
+
+  .accordion .accordion-navigation.active > a, .accordion dd.active > a {
+    background-color: transparent;
+    border-bottom: transparent;
+  }
+}
+
+.nav-icons {
+  height: 15px;
+  width: auto;
+  margin-left: 10px;
+  padding-bottom: 2px;
+}
+
+.main-menu {
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  border-bottom: 1px solid #eee;
+
+  li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0;
+    a {
+      padding-bottom: 1rem;
+      display: block;
+    }
+
+    a:hover,
+    a.is-active {
+      -webkit-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.75);
+      box-shadow: inset 0px -2px 0px 0px rgba(0,0,0,0.75);
+    }
+  }
+}
+
+
+//Desktop style for the single HTML navigation approach
+.main-menu {
+  .wrapper {
+    max-width: 1100px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .sub-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    background: white;
+    left: 0;
+    z-index: 10000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+    max-width: 1100px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-top: none;
+    @include clearfix;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  .col-1,
+  .col-2,
+  .col-3, {
+    float: left;
+  }
+
+  .col-4  {
+    float: right;
+  }
+
+  .sub-menu-section {
+    position: relative;
+    top: 0;
+    padding-bottom: 25px;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+
+      a {
+        padding-bottom: 0;
+      }
+    }
+
+    .section-label {
+      padding-bottom: 10px;
+    }
+  }
+
+  .sub-menu-espot {
+    float: right;
+    height: 230px;
+    width: 350px;
+    background: gray;
+    display: block;
+  }
+}
+
+//Mobile styles for the single html approach
+@media #{$small-only} {
+  .off-canvas-wrap.is-active {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .main-menu {
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    left: -100%;
+    z-index: 1000;
+    padding-left: 10%;
+    transition: all 0.3s ease;
+    top: 0;
+    border-bottom: none;
+    font-size: 12px;
+
+    a {
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 0;
+    }
+
+    li {
+      display: block;
+      border-bottom: 1px solid #cbcbcb;
+      a {
+        padding-bottom: 10px;
+        font-size: 12px;
+      }
+
+      .section-label {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 12px;
+        padding-left: 0;
+        margin-left: -12px;
+
+        &.empty {
+          display:none;
+        }
+      }
+    }
+
+
+    .menu-item {
+      display: block;
+      text-align: left;
+      padding: 20px 10px 20px 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    .sub-menu {
+      display: none;
+      position: relative;
+      background: none;
+      padding-top: 0;
+      top: -12px;
+    }
+  }
+
+  .main-menu .sub-menu-espot {
+    display: none;
+  }
+
+  .inner-wrap {
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .inner-wrap.is-active {
+    left: 90%;
+    transition: all 0.3s ease;
+
+  }
+
+  .main-menu li a:hover {
+    box-shadow: none;
+  }
+
+  .sub-menu.is-active {
+    display: block;
+    text-align: left;
+  }
+
+  .sub-menu {
+    li {
+      border-bottom: none;
+    }
+  }
+  
+  .main-menu {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4 {
+      float: none;
+    }
+
+  }
+
+  .main-menu .sub-menu-section {
+    margin-left: 0;
+
+    a {
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 0;
+    }
+  }
+}

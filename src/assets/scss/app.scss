@@ -1,0 +1,81 @@
+@import "settings";
+// @import "foundation";
+// import Foundation components
+// Or selectively include components
+
+@import"foundation/components/accordion";
+@import"foundation/components/alert-boxes";
+@import"foundation/components/block-grid";
+// @import"foundation/components/breadcrumbs";
+@import"foundation/components/button-groups";
+@import"foundation/components/buttons";
+// @import"foundation/components/clearing";
+@import"foundation/components/dropdown";
+@import"foundation/components/dropdown-buttons";
+@import"foundation/components/flex-video";
+@import"foundation/components/forms";
+@import"foundation/components/grid";
+@import"foundation/components/inline-lists";
+// @import"foundation/components/joyride";
+// @import"foundation/components/keystrokes";
+@import"foundation/components/labels";
+@import"foundation/components/magellan";
+@import"foundation/components/orbit";
+@import"foundation/components/pagination";
+@import"foundation/components/panels";
+// @import"foundation/components/pricing-tables";
+// @import"foundation/components/progress-bars";
+@import"foundation/components/reveal";
+// @import"foundation/components/side-nav";
+// @import"foundation/components/split-buttons";
+// @import"foundation/components/sub-nav";
+// @import"foundation/components/switch";
+@import"foundation/components/tables";
+@import"foundation/components/tabs";
+// @import"foundation/components/thumbs";
+@import"foundation/components/tooltips";
+// @import"foundation/components/top-bar";
+@import"foundation/components/type";
+@import"foundation/components/offcanvas";
+@import"foundation/components/visibility";
+
+@import "typography";
+
+@import "_foundation-icons";
+
+//Util
+@import "components/slick";
+
+// Components
+@import "components/util";
+
+@import "components/alerts";
+@import "components/buttons";
+@import "components/checkout";
+@import "components/confirmation";
+@import "components/dropdown";
+@import "components/error";
+@import "components/filter";
+@import "components/forms";
+@import "components/footer";
+@import "components/icons";
+@import "components/mini-bag";
+@import "components/navigation";
+@import "components/package";
+@import "components/product-detail";
+@import "components/product-detail-accordion";
+@import "components/product-detail-colors";
+@import "components/product-image";
+@import "components/product-recommended";
+@import "components/order-summary";
+@import "components/promotion-callout";
+@import "components/rating";
+@import "components/reserve-in-store";
+@import "components/reviews";
+@import "components/separate";
+@import "components/shopping-bag";
+@import "components/shopping-bag-modal";
+@import "components/shopping-bag-saved-items";
+@import "components/quick-view";
+@import "components/shoptelligence-section";
+

@@ -1,0 +1,38 @@
+.rating {
+  margin-bottom: 0;
+  position: relative;
+  top: -2px;
+}
+
+.label-rating,
+.label-rating-stars {
+  display: inline-block;
+}
+
+.label-rating-stars {
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+  width: 100px;
+  margin-bottom: 0;
+}
+
+.rating-star {
+  $star-size: 16px;
+  height: $star-size;
+  width: $star-size;
+  display: inline-block;
+  margin-left: -2px;
+}
+
+.rating-star-dimmed {
+  @extend .rating-star;
+  opacity: 0.25;
+}
+
+.rating-number {
+  font-size: rem-calc(10);
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.5;
+}

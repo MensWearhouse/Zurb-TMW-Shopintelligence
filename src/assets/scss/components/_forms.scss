@@ -1,0 +1,55 @@
+.pad-left {
+  width: 48%;
+}
+
+input[type='text'] {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  height: auto;
+  font-weight: 300;
+}
+
+input[type='text']:-ms-input-placeholder {
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+::-moz-input-placeholder {
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.postfix.button {
+ height: 43px;
+ padding-top: 3px;
+ left: -1px;
+}
+
+
+label.form-options-label {
+  margin-top: -10px;
+}
+
+input[type="checkbox"] + label{
+  top: 0;
+}
+
+input[type="text"]:focus {
+  background: white;
+  box-shadow: none;
+}
+

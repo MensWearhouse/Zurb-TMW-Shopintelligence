@@ -1,0 +1,116 @@
+<section>
+  <div class="row">
+    <div class="columns">
+      <!-- Shipping Dropdowns -->
+      <h3 class="section-label shipping">Shipping Address</h3>
+      <p class="small-message">At this time we do not ship to P.O. Boxes</p>
+      <form>
+
+        <a href="#">
+        <div class="dropdown shipping-dropdown is-active" id="dropdown-ship-address-1" >
+          <span class="selected-item dropdown-placeholder">Choose from saved addresses</span>
+          <ul class="custom-dropdown" id="dropdown-ship-address-dropdown-1" >
+            <li class="dropdown-item"><a href="#">Bryan Zmijewski, 100 W. Rincon Ave, Campbell, CA 95008</a></li>
+            <li class="dropdown-item"><a href="#">Bryan Zmijewski, 100 W. Rincon Ave, Campbell, CA 95008</a></li>
+            <li class="dropdown-item"><a href="#">Bryan Zmijewski, 100 W. Rincon Ave, Campbell, CA 95008</a></li>
+            <li class="dropdown-item"><a href="#">Bryan Zmijewski, 100 W. Rincon Ave, Campbell, CA 95008</a></li>
+            <li class="dropdown-item">
+              <a href="#" id="changeAddress2" class="small-text-link">Change Address</a>
+            </li>
+
+          </ul>
+        </div>
+        </a>
+        <div id="ChangeAddressInputs" class="change-address-area">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="text" placeholder="Street Address">
+          <input type="text" placeholder="Street Address 2 (optional)">
+          <input type="text" placeholder="City">
+          <input type="text" placeholder="State">
+          <input type="text" placeholder="Zip Code">
+          <input type="text" placeholder="Telephone">
+        </div>
+        <a href="#" id="changeAddress" class="small-text-link">Change Address</a>
+        <div id="saveAddress" class="address-save-address-area">
+          <div class="shipping-checkbox">
+          <input type="checkbox" class="checkbox-style" checked><label class="checkbox-label" >Save Address</label></input>
+          </div>
+        </div>
+      </form>
+
+      <h3 class="section-label shipping">Choose Shipping Method</h3>
+      <form>
+        <div class="size-dropdown-wrapper size-dropdown-shipping two-line">
+          <span class="selected-item">Free Ground Shipping: 3-5 bus. days</span>
+          <span class="selected-item dropdown-placeholder">Get it by Fri. March 4th</span>
+          <ul class="custom-dropdown">
+            <li class="dropdown-item">United States</li>
+            <li class="dropdown-item">United States</li>
+            <li class="dropdown-item">United States</li>
+            <li class="dropdown-item">United States</li>
+          </ul>
+        </div>
+      </form>
+      <!-- /Shipping Dropdowns -->
+
+      <div class="espot-placeholder">
+        <p>This area is reserved for an espot</p>
+      </div>
+
+      <!-- Accordions -->
+      <ul class="accordion" data-accordion>
+        <li class="accordion-navigation product-info-accordion">
+          <a class="product-info-label" href="#gift-order">This order is a gift</a>
+          <div id="gift-order" class="content checkout-content product-description-content">
+            <p>Gift Message will be printed on the packing slip. Packing slips do not include price information.</p>
+            <textarea placeholder="Gift Message"></textarea>
+            <div class="checkout-sub-ctas">
+              <button class="button secondary">Cancel</button>
+              <button class="button primary">Save</button>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-navigation product-info-accordion">
+          <a class="product-info-label" href="#ship-to-another-country">Ship to another country?</a>
+          <div id="ship-to-another-country" class= "content checkout-content product-description-content">
+            <a href="#">
+              <p class="learn-more-message">International shipping to over 150 countries.</p>
+              <img class="learn-more-info" src="{{assets}}images/icons/info-black.svg" alt="">
+            </a>
+            <p class="promotion-callout">$20 USD FLAT-RATE SHIPPING on orders over $175 USD</p>
+            <form>
+              <div class="size-dropdown-wrapper size-dropdown-shipping two-line alt">
+                <span class="selected-item">Select your shipping destination</span>
+                <span class="selected-item dropdown-placeholder">United States</span>
+                <ul class="custom-dropdown">
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                </ul>
+              </div>
+            </form>
+            <form>
+              <div class="size-dropdown-wrapper size-dropdown-shipping two-line alt">
+                <span class="selected-item">Select your preferred currency</span>
+                <span class="selected-item dropdown-placeholder">US Dollar</span>
+                <ul class="custom-dropdown">
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                  <li class="dropdown-item">United States</li>
+                </ul>
+              </div>
+            </form>
+            <div class="checkout-sub-ctas">
+              <button class="button secondary">Cancel</button>
+              <button class="button primary">Save</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- /Accordions -->
+    </div>
+  </div>
+</section>

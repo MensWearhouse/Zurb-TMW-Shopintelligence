@@ -1,0 +1,169 @@
+//Wrapper of custom dropdown
+.size-dropdown-wrapper,
+.dropdown {
+  width: 100%;
+  display: block;
+  background: white; 
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #9B9B9B;
+  height: 40px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  .out-of-stock {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.size-dropdown-shipping {
+  margin-top: 1rem;
+}
+
+//This is what is displayed in the dropdown as the selected item.
+.selected-item {
+  color: #222222;
+  position: relative;
+  top: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+
+  &::after {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ADADAD;
+    content:"";
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+}
+
+.dropdown-item {
+  letter-spacing: 2px;
+  color: #8A8A8A;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+//This styles the selected-item to look like a placeholder.
+.dropdown-placeholder {
+  color: #8A8A8A;
+  font-weight: 400;
+}
+
+//The guts of the dropdown.
+//This is the <ul>
+.custom-dropdown {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 0;
+
+  //Each list item in the dropdown menu.
+  li {
+    padding: 16px;
+    display: none;
+    border-bottom: 1px solid $light-gray;
+    text-transform: uppercase;
+    //We don't need no stinkin border for the last element.
+    &:last-child {
+      border-bottom: none;
+    }
+    //On hover, make the item look nice.
+    &:hover {
+      background: #FBFBFB;
+    }
+  }
+}
+
+//When the custom-dropdown is active, open that sucker up
+.custom-dropdown.is-active {
+    height: auto;
+    max-height: 400px;
+    overflow: auto;
+    margin-top: 1rem;
+    padding-top: 0;
+    position: absolute;
+    z-index: 10000;
+    width: calc(100% + 2px);
+    background: white;
+    margin-left: -11px;
+    border: 1px solid #9B9B9B;
+    border-top-color: white;
+    top: 11px;
+  //Gotta show the list item elements as well!
+  li {
+    display: block;
+  }
+}
+
+.bag.size-dropdown-wrapper,
+.quick-view .size-dropdown-wrapper {
+  margin-top: 30px;
+}
+
+.product-details-page {
+  .size-dropdown-wrapper {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .selected-item {
+    top: 5px;
+  }
+}
+
+.size-dropdown-wrapper.two-line {
+  height: 50px;
+
+  span {
+    &:after {
+      top: 10px;
+    }
+  }
+
+  span:nth-child(2n) {
+    font-size: 10px;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.size-dropdown-wrapper.two-line.alt {
+  span {
+    font-size: 10px;
+    color: #c7c7c7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:after {
+      top: 10px;
+    }
+  }
+
+  span:nth-child(2n) {
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    opacity: 1;
+    text-transform: none;
+    letter-spacing: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}

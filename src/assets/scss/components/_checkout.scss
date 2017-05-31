@@ -1,0 +1,463 @@
+//Tabs for the checkout section
+//TODO: make more generic.
+.checkout-tabs-content {
+  border-top: 1px solid $light-gray;
+  padding-top: 30px;
+}
+
+@media #{$small-only} {
+  .checkout-tabs-content {
+    padding-top: 10px;
+  }
+}
+
+.slick-arrow {
+  top: 43%;
+}
+
+.tabs-content {
+  margin-top: 0.5rem;
+}
+
+.tabs.checkout-tabs {
+  position: relative;
+
+  a {
+    font-size: 14px;
+    font-weight: 300;
+    background: #efefef;
+    padding: 5px 0;
+    outline: none;
+  }
+
+  .tab-title {
+    width: auto;
+    float: left;
+    width: 33.33%;
+
+    a {
+      text-transform: none;
+      text-align: center;
+      outline: none;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  .tab-title.active {
+    border: 1px solid white;
+  }
+}
+
+.tabs.checkout-toggle,
+.tabs.toggle {
+  a {
+    font-size: 10px;
+    background: white;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: black;
+  }
+
+  .tab-title {
+    width: 50%;
+    text-align: center;
+    
+    &.active {      
+      a {
+        background: black;
+        color: white;
+        outline: none;
+      }
+    }
+  }
+}
+
+.quantity-label.shipping-method-label {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.checkout-continue-cta {
+  margin-right: 10px;
+  min-width: 30%;
+}
+
+.off-canvas-wrap {
+  .is-faded {
+    opacity: 0.1;
+  }
+}
+
+.section-label.shipping {
+  font-size: 12px;
+  margin-top: 0;
+  letter-spacing: 2px;
+
+  &:not(:first-of-type) {
+    margin-top: 40px;
+
+  }
+}
+
+form {
+  .checkout-dropdown {
+    margin-top: 3px;
+    margin-bottom: 7px;
+  }
+}
+
+.review-cta {
+  width: 100%;
+  display: none !important;
+  
+  &.is-active {
+    display: inline-block !important;
+    width: auto;
+  }
+}
+
+//adjusting padding in shhipping accordions
+.accordion .product-info-accordion .checkout-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.learn-more-info,
+.learn-more-message {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.learn-more-info { 
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  top: -2px;
+  position: relative;
+}
+
+.product-info-accordion.payment-accordion {
+  padding-top: 0;
+}
+
+.payment-description {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.payment-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.gift-card.active {
+  input[type="text"] {
+    margin-bottom: 1rem;
+  }
+}
+
+.gift-message {
+  margin-bottom: 0;
+}
+
+input[type="text"].id-number-input {
+  margin-bottom: 4px;
+}
+
+.postfix.button {
+  margin-bottom: 0 !important;
+}
+
+.forgot-fit {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.center {
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.checkout-paypal-section {
+  position: relative;
+
+  .center {
+    position: relative;
+  }
+}
+
+.continue-paypal-link {
+  text-align: center;
+}
+
+.paypal-image {
+  display: block;
+}
+
+@media #{$small-only} {
+  .norton-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.bag-edit-links.review-edit {
+  opacity: 0.7;
+  margin-right: 0;
+  a {
+    opacity: 0.7;
+  }
+}
+
+//generic key value pairing
+.key-value {
+  list-style: none;
+
+  li {
+    @extend .clearfix;
+    margin-bottom: 10px;
+  }
+
+  .key,
+  .value {
+    display: inline;
+
+    p {
+      display: inline;
+    }
+  }
+
+  .key {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+
+  .value {
+    opacity: 0.5;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review-section-header {
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid gray;
+}
+
+.no-border {
+  border: none;
+}
+
+.review-section-title {
+  margin-bottom: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 500;
+  top: 4px;
+  position: relative;
+}
+
+.product-size {
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+//Bag items in the review section fixing the meta data.
+//TODO: combine with meta class in shopping bag
+.bag-item-selections {
+  list-style: none;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  
+  li {
+    font-size: 11px;
+    opacity: 0.5;
+  }
+}
+
+.store-location {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  .title {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  p {
+    margin-bottom: 0;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+}
+
+.paypal-image {
+  position: relative;
+}
+
+.checkout-paypal-section {
+  margin-top: 20px;
+}
+
+.checkout-review {
+  .product-price-orig {
+    font-size: 0.75rem;
+    top: -6px;
+    position: relative;
+  }
+  .product-price {
+    right: 0 !important;
+  }
+}
+
+
+.norton-checkout { 
+  margin-bottom: 1rem;
+}
+
+.checkout-sub-ctas {
+  @include clearfix;
+  margin-top: 1rem;
+
+  .primary, 
+  .secondary  {
+    width: 48%;
+  }
+  
+  .primary {
+    float: right;
+  }
+
+  .secondary {
+    float: left;
+    border-color: $callout-color;
+    color: $callout-color;
+
+    &:hover {
+      color: $callout-color;
+    }
+  }
+}
+
+.shipping-checkbox {
+  label {
+    position: relative;
+    top: 2px;
+    margin-right: 0 !important;
+    font-size: 12px;
+  }
+
+  label,
+  input {
+    display: inline !important;
+  }
+
+  input {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.checkout-review {
+  ul.order-summary-list {
+    margin-bottom: 1rem;
+  }
+}
+
+.review-section-header {
+  .left.section-label {
+    margin-bottom: 0;
+    top: 2px;
+  }
+}
+
+.checkout-review-promo {
+  margin-bottom: 1rem !important;
+}
+
+.sub-section-label {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  border-bottom: 1px solid #CBCBCB;
+
+  &.first {
+    margin-top: 3px;
+  }
+}
+
+.checkout-review {
+  .bag-item-detail {
+    padding-right: 150px !important;
+  }
+}
+
+@media #{$small-only} {
+  .checkout-review {
+    .bag-item-detail {
+      padding-right: 100px !important;
+    }
+  }
+}
+
+.forgot-password-large {
+  margin-bottom: 0 !important;
+}
+
+.forgot-password-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.text-label {
+  font-size: 12px;
+}
+
+.accordion .accordion-navigation > .text-me-cta {
+  padding: 0;
+}
+
+.accordion .accordion-navigation > .text-me-content.active{
+  padding: 1rem;
+}
+
+.accordion .accordion-navigation.active > a {
+  background: white;
+}
+
+.legal {
+  font-size: 10px;
+}
+
+.payment-info,
+.shipping-info,
+.item-summary-info {
+  margin-top: 30px;
+
+  .section-label,
+  .section-label-alt {
+    margin-bottom: 0px;
+  }
+
+  .review-section-header {
+    border-bottom: 1px solid #CBCBCB;
+  }
+}
+
+.checkout.logo-bar {
+  padding: 50px;
+}
+
+.shipping-checkbox {
+  padding-bottom: 10px;
+}

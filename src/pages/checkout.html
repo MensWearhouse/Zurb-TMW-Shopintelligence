@@ -1,0 +1,79 @@
+---
+title: checkout
+---
+
+<div class="row">
+  <div class="medium-8 columns collapse-for-small">
+    <ul class="tabs checkout-tabs" data-tab>
+      <li class="tab-title active"><a href="#panel1">Shipping</a></li>
+      <li class="tab-title"><a href="#panel2">Payment</a></li>
+      <!-- Used .panel3 for prototype code to help identify the stick order summary-->
+      <li class="tab-title panel3"><a href="#panel3">Review</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="medium-8 columns">
+    <div class="tabs-content">
+    <!-- Shipping Tab -->
+      {{>checkout-tab-1}}
+    <!-- /Shipping Tab -->
+
+    <!-- Payment Tab -->
+      {{>checkout-tab-2}}
+    <!-- /Payment Tab -->
+
+    <!-- Review Tab -->
+      {{>checkout-tab-3}}
+    <!-- /Review Tab -->
+    </div>
+  </div>
+
+  <div class="checkout medium-4 columns hide-for-small-only">
+    <div class="order-summary">
+      <h3 class="title">Order Summary</h3>
+      <ul class="order-summary-list">
+        <li>
+          <span class="list-title">Merchandise</span>
+          <span class="product-price">$104.<sup>99</sup></span>
+        </li>
+        <li>
+          <span class="list-title">Sales TAx</span>
+          <span class="product-price">$4.<sup>99</sup></span>
+        </li>
+        <li>
+          <span class="list-title">Local Tax</span>
+          <span class="product-price">$104.<sup>99</sup></span>
+        </li>
+        <li>
+          <span class="list-title">Shipping</span>
+          <span class="product-price">$104.<sup>99</sup></span>
+        </li>
+        <li class"sub-total">
+          <span class="list-title">Sub Total</span>
+          <span class="product-price">$104.<sup>99</sup></span>
+        </li>
+        <li class="total">
+          <span class="list-title">Order Total</span>
+          <span class="product-price">$104.<sup>99</sup></span>
+        </li>
+      </ul>
+      <div class="text-center">
+        <a href="#" class="button primary review-cta hide-for-small">Place Order</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="columns text-center">
+      <img class="norton-checkout" src="{{assets}}images/norton-logo-black.png" alt="">
+    </div>
+  </div>
+
+</div>
+
+
+
+

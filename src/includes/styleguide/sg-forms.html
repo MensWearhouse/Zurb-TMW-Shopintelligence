@@ -1,0 +1,160 @@
+<section id="forms">
+  <h2>Forms</h2>
+  <p>Forms are used for user input fields. They include text inputs, number inputs, text areas, dropdowns,  and checkboxes.</p>
+  
+  <hr>
+
+  <h3>Text Input</h3>
+  <p>Text inputs are simple input field that let user input one line of text. Basic HTML will do!</p>
+
+  <pre><code class="html">
+  <input type="text" placeholder="Please fill this out">  
+  </code></pre>
+
+  <input type="text" placeholder="Please fill this out">
+
+  <pre><code class="html">
+  <input class="has-error" type="text" placeholder="This has an error!">
+  </code></pre>
+
+  <input class="has-error" type="text" placeholder="This has an error!">
+
+  <p class="error-message">You need to select a size first</p>
+
+
+  <p>You can add errors by adding the class “has-error” to reduce the bottom margin of the text field.</p>
+
+  <pre><code class="html">
+    <div class="row collapse">
+    <div class="small-8 columns">
+        <input type="text" placeholder="Please fill this out">
+    </div>
+    <div class="small-4 columns">
+      <a href="#" class="primary button postfix">Apply</a>
+    </div>
+  </div>
+  </code></pre>
+
+  <div class="row collapse">
+    <div class="small-8 columns">
+        <input type="text" placeholder="Please fill this out">
+    </div>
+    <div class="small-4 columns">
+      <a href="#" class="primary button postfix">Apply</a>
+    </div>
+  </div>
+
+  <h3>Number Input</h3>
+  <p>Very similar to the text input,  the number input lets the user input items like quantity.</p>
+
+  <pre><code class="html">
+    <h3 class="section-label quantity-label">QTY:</h3>
+    <form>
+        <input type="number" class="left product-quantity" name="quantity" min="1" max="5" placeholder="1">
+    </form>
+  </code></pre>
+
+  <h3 class="section-label quantity-label">QTY:</h3>
+  <form>
+    <div class="clearfix">
+      <input type="number" class="left product-quantity" name="quantity" min="1" max="5" placeholder="1">
+    </div>
+  </form>
+
+
+  <h3>Dropdowns</h3>
+  <p>We use a custom dropdown to achieve the TMW-branded dropdowns.</p>
+
+  <pre><code class="html">
+    <form>
+      <div id="sizeDropdown" class="size-dropdown-wrapper">
+        <span class="selected-item dropdown-placeholder">Regular Sizes</span>
+        <ul id="sizeDropdownList" class="custom-dropdown">
+          <li class="dropdown-item">36 Short</li>
+          <li class="dropdown-item">36 Regular</li>
+          <li class="dropdown-item out-of-stock">59 Short</li>
+        </ul>
+      </div>
+    </form>
+  </code></pre>
+
+<div class="product-details-page">
+  <div class="clearfix">
+    <h3 class="left section-label size-label">Size:</h3>
+    <a class="right text-link big-and-tall-link" href="#">Switch to Big &amp; Tall Sizes</a>
+
+    <form>
+      <div id="sizeDropdown" class="size-dropdown-wrapper">
+        <span class="selected-item dropdown-placeholder">Regular Sizes</span>
+        <ul id="sizeDropdownList" class="custom-dropdown">
+          <li class="dropdown-item">36 Short</li>
+          <li class="dropdown-item">36 Regular</li>
+
+          <li class="dropdown-item">38 Short</li>
+          <li class="dropdown-item">38 Regular</li>
+          <li class="dropdown-item">38 Long</li>
+
+          <li class="dropdown-item">40 Short</li>
+          <li class="dropdown-item">40 Regular</li>
+          <li class="dropdown-item">40 Long</li>
+
+          <li class="dropdown-item out-of-stock">59 Short</li>
+          <li class="dropdown-item out-of-stock">22 Regular</li>
+          <li class="dropdown-item out-of-stock">11 Long</li>
+        </ul>
+      </div>      
+    </form>
+
+  </div>
+</div>
+
+  <h3>Dropdowns Two-Lines</h3>
+  <p>We can also created a two-lined dropdown by adding the class “two-line”.
+</p>
+
+  <pre><code class="html">
+    <div class="size-dropdown-wrapper size-dropdown-shipping two-line">
+      <span class="selected-item">Free Ground Shipping: 3-5 bus. days</span>
+      <span class="selected-item dropdown-placeholder">Get it by Fri. March 4th</span>
+      <ul class="custom-dropdown">
+        <li class="dropdown-item">United States</li>
+        <li class="dropdown-item">United States</li>
+        <li class="dropdown-item">United States</li>
+        <li class="dropdown-item">United States</li>
+      </ul>
+    </div>
+  </code></pre>
+
+  <div class="size-dropdown-wrapper size-dropdown-shipping two-line">
+    <span class="selected-item">Free Ground Shipping: 3-5 bus. days</span>
+    <span class="selected-item dropdown-placeholder">Get it by Fri. March 4th</span>
+    <ul class="custom-dropdown">
+      <li class="dropdown-item">United States</li>
+      <li class="dropdown-item">United States</li>
+      <li class="dropdown-item">United States</li>
+      <li class="dropdown-item">United States</li>
+    </ul>
+  </div>
+
+  <h3>Checkboxes</h3>
+  <p>Checkboxes are super simple to code up! Just write the standard checkbox HTML.
+</p>
+
+  <pre><code class="html">
+    <input type="checkbox"><label>Email me about exclusive sales and promotions</label></input>
+  </code></pre>
+
+  <div class="shipping-checkbox" style="position: relative;">
+    <input type="checkbox"><label>Email me about exclusive sales and promotions</label></input>
+  </div>
+
+  <h3>Text Area</h3>
+  <p>Finally, text areas are another way the user can input information. Just code up the standard textarea markup!
+</p>
+
+  <pre><code class="html">
+    <textarea cols="30" rows="10" placeholder="put some txt in here"></textarea>
+  </code></pre>
+
+    <textarea cols="30" rows="10" placeholder="put some txt in here"></textarea>
+</section>

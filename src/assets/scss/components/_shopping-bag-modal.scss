@@ -1,0 +1,182 @@
+//fades the background
+.is-faded {
+  opacity: 0.4;
+}
+
+//locks the body in scroll
+.is-scroll-locked {
+  overflow: hidden;
+}
+
+//Generic Shopping Bag Modals
+.bag-modal {
+  background: white;
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  overflow: auto;
+  padding: 10px;
+  padding-top: 40px;
+  //padding the bottom for cta
+  padding-bottom: 40px;
+
+  //Generic titles for shopping bags
+  .title {
+    position: absolute;
+    top: 0;
+  }
+}
+
+//for generic modal close buttons
+.bag-close {
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  padding: 5px;
+
+}
+
+//title for the edit modal
+.bag-edit-title {
+  padding-top: 15px;
+  padding-left: 10px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  background: white;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+//for the edit modal, since we are using vh
+.bag-close.edit-close {
+  position: fixed;
+}
+
+//product that is being edited
+.edit-item {
+  padding: 12px;
+}
+
+//name of the edited product
+.edit-item-detail {
+  .product-name {
+    font-size: rem-calc(15);
+    padding-left: 10px;
+  }
+}
+
+//colors of edited product
+.shopping-edit.color-label {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+//color name of the edited product
+.color-name.shopping-edit {
+  margin-bottom: 0;
+}
+
+.color-name {
+  margin-bottom: 0;
+}
+
+//generic bag cta styling
+.bag-cta {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 103;
+  margin-bottom: 0;
+  border: none;
+  padding: 15px;
+}
+
+//Adds drop shadow to top when modal is active,
+//so that the shadow doesn't stick
+.bag-modal {
+  &.is-active {
+    box-shadow: 0px -1px 11px 0px rgba(0,0,0,0.17);
+  }
+}
+
+//The edit modal height, which is dependent of the screen height
+.bag-edit-modal {
+  height: 80vh;
+  top: 100%;
+  transition: all 0.3s ease-out;
+
+  &.is-active {
+    top: 20vh;
+    transition: all 0.3s ease-out;
+  }
+}
+
+//Sign in modal height
+.bag-sign-in,
+.bag-forgot {
+  padding-bottom: 80px;
+  bottom: -100%;
+  transition: all 0.3s ease-out;
+
+  &.is-active {
+    bottom: 0;
+    transition: all 0.3s ease-out;
+  }
+}
+
+//Because we're sticking the top of the modal, 
+//we want to base it off the vh for the edit modal
+.bag-edit-title,
+.edit-close {
+  top: 100%;
+  transition: all 0.3s ease-out;
+
+  &.is-active {
+    top: 20vh;
+    transition: all 0.3s ease-out;
+  }
+}
+
+//We want the cta's within each modal to appear on active too!
+.bag-edit-cta,
+.bag-sign-in-cta,
+.bag-forgot-cta {
+  bottom: 100%;
+  &.is-active {
+    bottom: 0;
+  }
+}
+
+//edit bag dropdown
+.bag-dropdown {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.reveal-modal {
+  width: 900px;
+
+  .close {
+    position: absolute;
+    right: 21px;
+    top: 23px;
+    font-size: 30px;
+    color: black;
+    z-index: 10;
+  }
+}
+
+.reveal-modal {
+  .section-label.title {
+    margin-top: 0;
+    margin-left: 16px;
+  }
+
+  .product-price {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,338 @@
+---
+section: rent
+---
+<div class="page-error-message text-center row">
+  <div class="columns">
+    <p class="message">This is an overall page error</p>
+    <a class="close">&times;</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns">
+    <div class="espot-top">
+      <p>This area is for an espot</p>
+    </div>
+  </div>
+</div>
+
+<div class="shopping-bag row">
+  <div class="bag-items">
+    <!-- header -->
+    <div class="shopping-bag-header">
+      <div class="clearfix">
+        <p class="section-label shopping-bag-title">Shopping Bag <span class="seciton-label-alt">2 items</span></p>
+
+        <div class="right show-for-small-only">
+          <h3 class="shopping-bag-subtotal">Subtotal</h3>
+          <p class="shopping-bag-subtotal-price">729.<sup>99</sup></p>
+        </div>
+      </div>
+
+      <div class="page-error-message text-center row">
+        <div class="columns">
+          <p class="message">This is another location for an overall page error</p>
+          <a class="close">&times;</a>
+        </div>
+      </div>
+
+      <div class="espot-top text-center">
+        <p>This area is for an espot</p>
+      </div>
+
+    </div>
+
+    <!-- shopping-bag-item -->
+    <div class="bag-item">
+        <div class="bag-item-image">
+          <img src="{{assets}}images/browse/product-thumbnail-suit-2.jpg">
+        </div>
+        <div class="bag-item-detail">
+        <div class="price-and-qty">
+        <span class="product-price-orig">$849.<sup>59</sup></span>
+          <span class="product-price">$699.<sup>99</sup></span>
+          <p class="clearance">Clearance</p>
+         </div>
+          <h2 class="product-name">Tommy Hilfigure Slim Fit Suit</h2>
+          <ul class="bag-item-meta-data">
+            <li>Color: Charcoal</li>
+            <li>Size: 38 Regular</li>
+            <li>QTY: 1</li>
+            <li>#9348573</li>
+          </ul>
+          <div class="bag-edit-links">
+            <img class="text-link-icon edit-icon" src="{{assets}}images/icons/edit-black.svg" alt="">
+            <a class="text-link medium-up" href="#" data-reveal-id="editModal">Edit</a>
+            <a class="text-link small-only" href="#" >Edit</a> |
+            <img class="text-link-icon remove-icon" src="{{assets}}images/icons/close-black.svg" alt="">
+            <a class="text-link" href="#">Remove</a> |
+            <img class="text-link-icon remove-icon" src="{{assets}}images/icons/heart-black.svg" alt="">
+            <a class="text-link" href="#">Save</a>
+          </div>
+          <div class="bag-promo">
+            <p class="promotion-callout">Buy 1 Get 1 FREE Suits and Sport Coats and get 50% Off additional items.</p>
+            <a href="#" class="text-link add-another" id="add-more-filters">Add another</a>
+          </div>
+          <p class="low-stock">Low Stock</p>
+
+      </div>
+    </div>
+
+    {{> shopping-bag-edit-modal}}
+
+    <!-- shopping-bag-item -->
+    <div class="bag-item">
+
+        <div class="bag-item-image">
+          <img src="{{assets}}images/retail/product-thumbnail-shirt.jpg">
+        </div>
+        <div class="bag-item-detail">
+        <div class="price-and-qty">
+          <span class="product-price">$699.<sup>99</sup></span>
+         </div>
+          <h2 class="product-name">Tommy Hilfigure Slim Fit Suit</h2>
+          <ul class="bag-item-meta-data">
+            <li>Color: Charcoal</li>
+            <li>Size: 38 Regular</li>
+            <li>QTY: 1</li>
+            <li>#9348573</li>
+          </ul>
+          <div class="bag-edit-links">
+            <img class="text-link-icon edit-icon" src="{{assets}}images/icons/edit-black.svg" alt="">
+            <a id="shoppingEdit" class="text-link" href="#">Edit</a> |
+            <img class="text-link-icon remove-icon" src="{{assets}}images/icons/close-black.svg" alt="">
+            <a class="text-link" href="#">Remove</a> |
+            <img class="text-link-icon remove-icon" src="{{assets}}images/icons/heart-black.svg" alt="">
+            <a class="text-link" href="#">Save</a>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- small promo -->
+    <ul class="accordion promo-accordion show-for-small-only" data-accordion>
+      <li class="accordion-navigation">
+        <a class="product-info-label" href="#panel1a">Promo Code</a>
+        <div id="panel1a" class="content">
+          <div class="row collapse">
+            <div class="small-9 columns">
+              <input type="text" placeholder="Promo Code" />
+            </div>
+            <div class="small-3 columns">
+              <a href="#" class="button primary postfix">Apply</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="paypal-small show-for-small-only">
+      <img class="paypal-button" src="{{assets}}images/paypal-ph.png">
+    </div>
+
+  </div>
+
+  <div class="small-12 medium-4 columns">
+    <!-- Shopping Bag order summary -->
+    <div class="order-summary-area hide-for-small-only">
+      <div class="order-summary">
+        <h3 class="title">Order Summary</h3>
+        <ul class="order-summary-list">
+          <li>
+            <span class="list-title">Subtotal</span>
+            <span class="value product-price">104.<sup>99</sup></span>
+          </li>
+          <li>
+            <span class="list-title">Est. Shipping</span>
+            <span class="value product-price">$10.<sup>00</sup></span>
+          </li>
+          <li class="total">
+            <span class="list-title">Est. Total</span>
+            <span class="value product-price">$104.<sup>99</sup></span>
+          </li>
+        </ul>
+        <!-- promo -->
+        <ul class="accordion shopping-bag hide-for-small-only" data-accordion>
+          <li class="accordion-navigation">
+            <a class="product-info-label" href="#panel1a">Promo Code</a>
+            <div id="panel1a" class="content">
+              <div class="row collapse">
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Promo Code" />
+                </div>
+                <div class="small-3 columns">
+                  <a href="#" class="button primary postfix">Apply</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- /promo -->
+      </div>
+      <!-- /Shopping Bag order summary -->
+
+      <!-- Checkout CTAs for shopping bag -->
+      <div class="sub-checkout-ctas">
+
+        <div id="signInCheckoutCTALarge" class="sign-in-emphasis">
+          <input class="email hide-for-small-only is-hidden" type="text" placeholder="Email">
+
+          <p class="error-message top is-hidden">This is an error message</p>
+          <input class="error hide-for-small-only forgot-password-large is-hidden" type="text" placeholder="Password">
+          <a href="#" class="forgot-password-link small-text-link is-hidden">Forgot Password?</a>
+
+
+          <a href="#" id="signIn"  class="button primary checkout-cta show-for-small-only">
+            <span class="cta-title">Sign In</span>
+            <span class="cta-subhead">To Checkout</span>
+          </a>
+          <a href="#" id="signInLarge"  class="button primary checkout-cta hide-for-small-only">
+            <span class="cta-title">Sign In</span>
+            <span class="cta-subhead">To Checkout</span>
+          </a>
+        </div>
+
+        <p class="or">or</p>
+          <div id="guestCheckoutCTALarge">
+            <div id="guestInputs" class="checkout-cta-inputs">
+              <input class="hide-for-small-only" type="text" placeholder="Email">
+            </div>
+
+            <a id="checkoutGuest" class="button primary guest-cta">
+              <span class="cta-title">Checkout</span>
+              <span class="cta-subhead">As Guest</span>
+            </a>
+          </div>
+        <div class="text-center">
+          <img class="paypal-button" src="{{assets}}images/paypal-ph.png">
+        </div>
+      </div>
+    <!-- /ctas -->
+    </div>
+  </div>
+</div>
+
+
+<!-- //shoptelligence sections -->
+<!-- desktop view: -->
+<div class="hide-for-small-only shopping-bag-shoptelligence">
+    {{>shoptelligence-carousel}}
+</div>
+
+<!-- mobile view: -->
+<div class="row columns">
+  <div class="shopping-bag-shoptelligence-section-mobile">
+      <div class="show-for-small-only shoptelligence-carousel-mobile">
+        {{>shopping-bag-shoptelligence-carousel-mobile}}
+      </div>
+  </div>
+</div>
+
+<!-- other recommendation section -->
+<div class="row shopping-bag-recommendations">
+  <div class="medium-8 columns">
+    <h3 class="saved-items-label">Saved Items</h3>
+
+    <ul id="shoppingBagSaved" class="saved-items">
+      <li class="saved-item">
+        <a href="#" class="saved-item-link">
+          <img class="saved-thumbnail" src="{{assets}}images/retail/tie-1.jpg">
+          <div class="saved-thumbnail-description">
+            <h3 class="saved-thumbnail-title">Esquire Narrow Tie</h3>
+            <p class="saved-thumbnail-price">
+              <span class="product-price-orig">$49.<sup>59</sup></span>
+              <span class="product-price-discount">$16.<sup>99</sup></span>
+            </p>
+          </div>
+        </a>
+        <a href="#" class="button primary add-to-bag-cta">Add to Bag</a>
+        <a href="#" class="remove-cta">&times;</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row shopping-bag-recommendations show-for-medium-up">
+  <div class="medium-10 medium-push-1 columns">
+    {{>product-recommendations-shopping-bag}}
+  </div>
+</div>
+
+<!-- Edit Shopping Bag Modal -->
+<div class="bag-modal bag-edit-modal show-for-small-only">
+  <h3 class="bag-edit-title">Edit</h3>
+  <a href="#" id="shoppingBagEditModalClose" class="bag-close edit-close">
+    <img src="{{assets}}images/icons/close-black.svg" alt="">
+  </a>
+  <div class="edit-item">
+    <div class="row small-collapse">
+      <div class="small-3 columns">
+        <img src="{{assets}}images/browse/product-thumbnail-suit-2.jpg">
+      </div>
+      <div class="small-9 columns edit-item-detail">
+        <h2 class="product-name">Tommy Hilfigure Slim Fit Suit</h2>
+        <div class="price-and-qty">
+          <span class="product-price">$699.<sup>99</sup></span>
+          <p class="quantity">QTY: 1</p>
+         </div>
+        <div class="bag-edit-links">
+          <img class="text-link-icon remove-icon" src="{{assets}}images/icons/close-black.svg" alt="">
+          <a class="text-link" href="#">Remove</a>
+        </div>
+      </div>
+    </div>
+    <div class="row small-collapse">
+      <div class="columns">
+        {{>shopping-edit-colors}}
+      </div>
+    </div>
+    <div class="row small-collapse">
+      <div class="columns">
+        {{>shopping-edit-sizing-dropdown}}
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#" class="button primary bag-cta bag-edit-cta show-for-small-only">update</a>
+<!-- End Edit Shopping Bag Modal -->
+
+
+<!-- Sign in CTA Modal -->
+<div class="bag-modal bag-sign-in show-for-small-only">
+  <h3 class="title">Sign in to checkout</h3>
+  <a id="sign-in-close" href="#" class="bag-close"><img src="{{assets}}images/icons/close-black.svg" alt=""></a>
+  <input type="text" placeholder="Email">
+  <input type="text" placeholder="Password">
+  <a href="#" id="bagForgotPassword" class="form-helper text-link">Forgot Password?</a>
+</div>
+
+<a href="#" class="bag-cta bag-sign-in-cta button primary show-for-small-only">
+  <span class="cta-title">Sign In</span>
+  <span class="cta-subhead">To Checkout</span>
+</a>
+<!-- Sign in CTA Modal -->
+
+<!-- Forgot Modal -->
+<div class="bag-modal bag-forgot show-for-small-only">
+  <h3 class="title">Reset Password</h3>
+  <a href="#" id="forgotPasswordClose" class="bag-close forgot-close"><img src="{{assets}}images/icons/close-black.svg" alt=""></a>
+  <p class="bag-modal-sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, sa, suscipit neque.</p>
+  <input type="text" placeholder="Email">
+</div>
+
+<a href="#" class="button primary bag-cta bag-forgot-cta show-for-small-only">Reset Password</a>
+<!-- Sign in CTA Modal -->
+
+
+
+<div class="shopping-bag-cta-small show-for-small-only">
+  <a href="#" id="signIn"  class="button primary checkout-cta">
+    <span class="cta-title">Sign In</span>
+    <span class="cta-subhead">To Checkout</span>
+  </a>
+  <a id="" class="button primary guest-cta">
+    <span class="cta-title">Checkout</span>
+    <span class="cta-subhead">As Guest</span>
+  </a>
+</div>
+
