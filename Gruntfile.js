@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           suffix: '_page_'
       }
     },
-  },  
+  },
     assemble: {
       options: {
         flatten: false,
@@ -55,7 +55,17 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/assets/css/app.css': 'src/assets/scss/app.scss'
-        }        
+        }
+      }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'iOS >= 8']
+      },
+      dist: {
+        files: {
+          'dist/assets/css/app.css': 'dist/assets/css/app.css'
+        }
       }
     },
 
@@ -95,9 +105,9 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      grunt: { 
+      grunt: {
         files: ['Gruntfile.js'],
-        tasks: ['build'] 
+        tasks: ['build']
       },
 
       sass: {
@@ -131,7 +141,7 @@ module.exports = function(grunt) {
     }
   });
 
-  
+
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -141,8 +151,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-browser-sync');
-  
-  
-  grunt.registerTask('build', ['clean','sass','csssplit','uglify','assemble','copy']);
+  grunt.loadNpmTasks('grunt-autoprefixer');
+
+
+  grunt.registerTask('build', ['clean','sass', 'autoprefixer', 'csssplit','uglify','assemble','copy']);
   grunt.registerTask('default', ['build','browserSync','watch']);
 }
