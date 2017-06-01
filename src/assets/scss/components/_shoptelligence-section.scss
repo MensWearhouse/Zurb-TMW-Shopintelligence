@@ -175,6 +175,10 @@ $background-gray: #f5f5f5;
       cursor: default;
     }
 
+    @media #{$medium-only} {
+      margin-left:  -9em !important;
+    }
+
     @media #{$small-only} {
       visibility: hidden;
     }
@@ -191,6 +195,10 @@ $background-gray: #f5f5f5;
     .look-individual-item a {
       pointer-events: none;
       cursor: default;
+    }
+
+    @media #{$medium-only} {
+      margin-left:  9em !important;
     }
 
     @media #{$small-only} {
@@ -266,14 +274,10 @@ $background-gray: #f5f5f5;
   }
 
   @media #{$small-only} {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
   .trigger-preview-images {
-      -webkit-box-flex: 1 0 auto;
-          -ms-flex: 1 0 auto;
-              flex: 1 0 auto;
+    flex: 1 0 auto;
     }
   }
 }
