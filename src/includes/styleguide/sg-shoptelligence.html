@@ -1,0 +1,22 @@
+        <section class="content" id="buttons">
+          <h2>Shoptelligence Carousel</h2>
+          <p class="lead">This Carousel is shown on the PDP and Shopping bag pages. However the mobile views are different - on PDP it switches over to a CTA that when clicked open reveals the carousel.</p>
+
+          <hr>
+
+          <!-- //shoptelligence sections -->
+<!-- desktop view: -->
+<div class="hide-for-small-only shopping-bag-shoptelligence">
+    {{>shoptelligence-carousel}}
+</div>
+
+<!-- mobile view: -->
+<div class="row columns">
+  <div class="shopping-bag-shoptelligence-section-mobile">
+      <div class="show-for-small-only shoptelligence-carousel-mobile">
+        {{>shopping-bag-shoptelligence-carousel-mobile}}
+      </div>
+  </div>
+</div>
+
+
